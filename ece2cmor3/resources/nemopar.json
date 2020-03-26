@@ -20,6 +20,10 @@
         "target": "bigthetaoga"
     },
     {
+        "source": "calving",
+        "target": "calving"
+    },
+    {
         "source": "cfc11",
         "target": "cfc11"
     },
@@ -269,6 +273,10 @@
         "target": "rlntds"
     },
     {
+        "source": "rhopo",
+        "target": "rhopo"
+    },
+    {
         "source": "rsdo",
         "target": "rsdo"
     },
@@ -276,6 +284,10 @@
         "source": "rsntds",
         "target": "rsntds"
     },
+    {
+    	"source": "subl",
+	"target": "subl"
+    }, 
     {
         "source": "sf6",
         "target": "sf6"
@@ -287,6 +299,10 @@
     {
         "source": "sftof",
         "target": "sftof"
+    },
+    {
+        "source": "sfriver",
+        "target": "sfriver"
     },
     {
         "source": "sltbasin",
@@ -343,6 +359,10 @@
     {
         "source": "tauvo",
         "target": "tauvo"
+    },
+    {
+	"source": "taum",
+	"target": "taum"
     },
     {
         "source": "thetao",
@@ -413,8 +433,16 @@
         "target": "vo"
     },
     {
+        "source": "volcello",
+        "target": "volcello"
+    },
+    {
         "source": "volo",
         "target": "volo"
+    },
+    {
+        "source": "vsf",
+        "target": "vsf"
     },
     {
         "source": "wfcorr",
@@ -435,6 +463,10 @@
     {
         "source": "wo",
         "target": "wo"
+    },
+    {
+	"source": "wspd",
+	"target": "wspd"
     },
     {
         "source": "zhalfo",
@@ -839,6 +871,10 @@
     {
         "source": "ppdiat",
         "target": "ppdiat"
+    },
+    {
+	"source": "precip",
+	"target": "precip"
     },
     {
         "source": "ppmisc",
