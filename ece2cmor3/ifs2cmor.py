@@ -134,7 +134,9 @@ def initialize(path, expname, tableroot, refdate, tempdir=None, autofilter=True)
     if not os.path.exists(temp_dir_):
         os.makedirs(temp_dir_)
     if auto_filter_:
-        grib_filter.initialize(ifs_gridpoint_files_, ifs_spectral_files_, temp_dir_)
+        ini_gpf = None if ifs_init_gridpoint_file_ == ifs_gridpoint_files_.values()[0] else ifs_init_gridpoint_file_
+        grib_filter.initialize(ifs_gridpoint_files_, ifs_spectral_files_, temp_dir_, ini_gpfile=ini_gpf,
+                               ini_shfile=ifs_init_spectral_file_)
     return True
 
 
@@ -166,9 +168,9 @@ def execute(tasks, nthreads=1):
             if task.target.variable in ["orog", "areacella"]:
                 task.source.grid_ = cmor_source.ifs_grid.point
             if task.source.grid_id() == cmor_source.ifs_grid.spec:
-                setattr(task, cmor_task.filter_output_key, ifs_init_spectral_file_)
+                setattr(task, cmor_task.filter_output_key, [ifs_init_spectral_file_])
             else:
-                setattr(task, cmor_task.filter_output_key, ifs_init_gridpoint_file_)
+                setattr(task, cmor_task.filter_output_key, [ifs_init_gridpoint_file_])
             setattr(task, cmor_task.output_frequency_key, 0)
     else:
         tasks_to_filter = mask_tasks + fx_tasks + surf_pressure_tasks + regular_tasks
@@ -751,7 +753,7 @@ def create_time_axis(freq, path, name, has_bounds):
     date_times = cmor_utils.read_time_stamps(path)
     if len(date_times) == 0:
         log.error("Empty time step list encountered at time axis creation for files %s" % str(path))
-        return 0
+        return 0, [], []
     if has_bounds:
         bounds = numpy.empty([len(date_times), 2])
         rounded_times = map(lambda time: (cmor_utils.get_rounded_time(freq, time)), date_times)
