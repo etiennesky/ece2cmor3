@@ -17,8 +17,16 @@
         "target": "cLand"
     },
     {
-        "source": "cFlux",
-        "target": "cFlux"
+        "source": "cLand1",
+        "target": "cLand1"
+    },
+    {
+        "source": "cLandYr",
+        "target": "cLandYr"
+    },
+    {
+        "source": "cFluxYr",
+        "target": "cFluxYr"
     },
     {
         "source": "cLeaf",

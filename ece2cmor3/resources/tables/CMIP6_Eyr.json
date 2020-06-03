@@ -356,7 +356,7 @@
             "ok_min_mean_abs": "", 
             "ok_max_mean_abs": ""
         },
-        "cLand": {
+        "cLandYr": {
             "frequency": "yr", 
             "modeling_realm": "land", 
             "standard_name": "mass_content_of_carbon_in_vegetation_and_litter_and_soil_and_forestry_and_agricultural_products", 
@@ -366,7 +366,7 @@
             "long_name": "Total Carbon in All Terrestrial Carbon Pools", 
             "comment": "Report missing data over ocean grid cells. For fractional land report value averaged over the land fraction.", 
             "dimensions": "longitude latitude time", 
-            "out_name": "cLand", 
+            "out_name": "cLandYr", 
             "type": "real", 
             "positive": "", 
             "valid_min": "", 
@@ -374,7 +374,7 @@
             "ok_min_mean_abs": "", 
             "ok_max_mean_abs": ""
         },
-        "cFlux": {
+        "cFluxYr": {
             "frequency": "yr", 
             "modeling_realm": "land", 
             "standard_name": "cFlux", 
@@ -384,7 +384,7 @@
             "long_name": "cFlux", 
             "comment": "cFlux", 
             "dimensions": "longitude latitude time", 
-            "out_name": "cFlux", 
+            "out_name": "cFluxYr", 
             "type": "real", 
             "positive": "", 
             "valid_min": "", 
