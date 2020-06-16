@@ -705,6 +705,10 @@
         "target": "intdoc"
     },
     {
+        "source": "intpoc",
+        "target": "intpoc"
+    },
+    {
         "source": "intpbfe",
         "target": "intpbfe"
     },
@@ -759,6 +763,10 @@
     {
         "source": "limndiaz",
         "target": "limndiaz"
+    },
+    {
+        "source": "limndiat",
+        "target": "limndiat"
     },
     {
         "source": "limnmisc",
